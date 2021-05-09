@@ -1,0 +1,6 @@
+#ErrorDocument 404 /var/www/html/404.php
+ RewriteEngine On
+ RewriteCond %{REQUEST_FILE} !-d
+ RewriteCond %{REQUEST_FILE} !-f
+ RewriteCond %{REQUEST_URI} !.(css|gif|ico|jpg|js|png|swf|txt)$
+ RewriteRule ^ index.php [L,QSA]
